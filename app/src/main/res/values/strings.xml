@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+
+    <string-array name="opcTurnoPU">
+        <item>Seleccione</item>
+        <item>Diurno</item>
+        <item>Nocturno</item>
+    </string-array>
+
+    <string-array name="opcTipoPU">
+        <item>Seleccione</item>
+        <item>Camión minero</item>
+        <item>Vehículo auxiliar</item>
+        <item>Pala hidráulica</item>
+        <item>Camioneta</item>
+        <item>Perforadora</item>
+    </string-array>
+
+    <string-array name="opcCamionMinero">
+        <item>Seleccione</item>
+        <item>CM001</item>
+        <item>CM002</item>
+        <item>CM003</item>
+        <item>CM004</item>
+    </string-array>
+
+    <string-array name="opcVehiculoAuxiliar">
+        <item>Seleccione</item>
+        <item>VA001</item>
+        <item>VA002</item>
+        <item>VA003</item>
+        <item>VA004</item>
+    </string-array>
+
+    <string-array name="opcPalaHidraulica">
+        <item>Seleccione</item>
+        <item>PH001</item>
+        <item>PH002</item>
+        <item>PH003</item>
+        <item>PH004</item>
+    </string-array>
+
+    <string-array name="opcCamioneta">
+        <item>Seleccione</item>
+        <item>CA001</item>
+        <item>CA002</item>
+        <item>CA003</item>
+        <item>CA004</item>
+    </string-array>
+
+    <string-array name="opcPerforadora">
+        <item>Seleccione</item>
+        <item>PE001</item>
+        <item>PE002</item>
+        <item>PE003</item>
+        <item>PE004</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>
