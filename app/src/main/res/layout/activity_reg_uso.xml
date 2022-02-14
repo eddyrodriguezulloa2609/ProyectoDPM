@@ -111,6 +111,7 @@
                 android:text="Sistema Hidra" />
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgSH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:selectionRequired="true"
@@ -162,6 +163,7 @@
                 android:text="Aire" />
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgAire"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:selectionRequired="true"
@@ -213,6 +215,7 @@
                 android:text="Cabina" />
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgCabina"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:selectionRequired="true"
@@ -264,6 +267,7 @@
                 android:text="Tablero" />
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgTablero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:selectionRequired="true"
@@ -286,7 +290,8 @@
                     android:layout_height="wrap_content"
                     android:text="Malo"
                     android:textColor="@color/chip_tx_malo"
-                    app:chipBackgroundColor="@color/chip_bg_malo" />
+                    app:chipBackgroundColor="@color/chip_bg_malo"
+                    tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.chip.ChipGroup>
 
             <EditText
@@ -314,16 +319,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/txtComentario"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/caja_bg"
         android:ems="10"
+        android:hint="Ingrese su comentario"
+        android:padding="10dp"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHoraFinal" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraFinal"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnRegistrar"

@@ -29,6 +29,8 @@ class RegistroBE(val id:String?=null,
                  val HoroFin:Int?=0,
                  val Firma:String?=null,
                  val Estado:String?=null,
-                 val Fecha:String?=null) {
+                 val FechaPU:String?=null,
+                 val FechaUS:String?=null,
+                 val FechaFI:String?=null) {
 
 }

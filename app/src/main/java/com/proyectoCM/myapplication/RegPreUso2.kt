@@ -139,7 +139,7 @@ class RegPreUso2 : AppCompatActivity() {
 
                 val reg = RegistroBE(null, sCorreo, _iTurno, _sTurno, _iTipo, _sTipo, _iEquipo, _sEquipo, _SistemaHidra, _SistemaHidraObs, _Aire, _AireObs, _Cabina, _CabinaObs,
                     _Tablero, _TableroObs, _HoroIni, null, null, null, null, null, null,
-                    null, null, null, 0, null, _Estado, currentDate)
+                    null, null, null, 0, null, _Estado, currentDate, null, null)
 
                 reference.child(llave).setValue(reg)
                 mostrarMensaje("Mensaje", "Preuso registrado con éxito")

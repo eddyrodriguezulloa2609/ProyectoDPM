@@ -62,7 +62,6 @@ class ListaReg : AppCompatActivity() {
         title = "Lista de Registros"
 
         /* DATOS DEL USUARIO */
-
         dbF.collection("users").document(correo).get().addOnSuccessListener {
             lblUsuario.setText("Bienvenido(a) " + it.get("nombreC") as String?)
         }
@@ -77,45 +76,50 @@ class ListaReg : AppCompatActivity() {
         configurarRV(rvRegistros)
     }
 
-
     private fun configurarRV(rvRegistros: RecyclerView) {
         listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 lstRegistros.clear()
+
                 snapshot.children.forEach { item ->
-                    val registro:RegistroBE = RegistroBE(
-                        item.key.toString(),
-                        item.child("usuario").getValue().toString(),
-                        item.child("iturno").getValue().toString().toInt(),
-                        item.child("sturno").getValue().toString(),
-                        item.child("itipo").getValue().toString().toInt(),
-                        item.child("stipo").getValue().toString(),
-                        item.child("iequipo").getValue().toString().toInt(),
-                        item.child("sequipo").getValue().toString(),
-                        item.child("sistemaHidraPU").getValue().toString(),
-                        item.child("sistemaHidraObsPU").getValue().toString(),
-                        item.child("airePU").getValue().toString(),
-                        item.child("aireObsPU").getValue().toString(),
-                        item.child("cabinaPU").getValue().toString(),
-                        item.child("cabinaObsPU").getValue().toString(),
-                        item.child("tableroPU").getValue().toString(),
-                        item.child("tableroObsPU").getValue().toString(),
-                        item.child("horoIni").getValue().toString().toInt(),
-                        item.child("sistemaHidraU").getValue().toString(),
-                        item.child("sistemaHidraObsU").getValue().toString(),
-                        item.child("aireU").getValue().toString(),
-                        item.child("aireObsU").getValue().toString(),
-                        item.child("cabinaU").getValue().toString(),
-                        item.child("cabinaObsU").getValue().toString(),
-                        item.child("tableroU").getValue().toString(),
-                        item.child("tableroObsU").getValue().toString(),
-                        item.child("comentario").getValue().toString(),
-                        item.child("horoFin").getValue().toString().toInt(),
-                        item.child("firma").getValue().toString(),
-                        item.child("estado").getValue().toString(),
-                        item.child("fecha").getValue().toString()
-                    )
-                    registro.let { lstRegistros.add(it) }
+                    if (item.child("estado").getValue().toString() != "FI")
+                    {
+                        val registro:RegistroBE = RegistroBE(
+                            item.key.toString(),
+                            item.child("usuario").getValue().toString(),
+                            item.child("iturno").getValue().toString().toInt(),
+                            item.child("sturno").getValue().toString(),
+                            item.child("itipo").getValue().toString().toInt(),
+                            item.child("stipo").getValue().toString(),
+                            item.child("iequipo").getValue().toString().toInt(),
+                            item.child("sequipo").getValue().toString(),
+                            item.child("sistemaHidraPU").getValue().toString(),
+                            item.child("sistemaHidraObsPU").getValue().toString(),
+                            item.child("airePU").getValue().toString(),
+                            item.child("aireObsPU").getValue().toString(),
+                            item.child("cabinaPU").getValue().toString(),
+                            item.child("cabinaObsPU").getValue().toString(),
+                            item.child("tableroPU").getValue().toString(),
+                            item.child("tableroObsPU").getValue().toString(),
+                            item.child("horoIni").getValue().toString().toInt(),
+                            item.child("sistemaHidraU").getValue().toString(),
+                            item.child("sistemaHidraObsU").getValue().toString(),
+                            item.child("aireU").getValue().toString(),
+                            item.child("aireObsU").getValue().toString(),
+                            item.child("cabinaU").getValue().toString(),
+                            item.child("cabinaObsU").getValue().toString(),
+                            item.child("tableroU").getValue().toString(),
+                            item.child("tableroObsU").getValue().toString(),
+                            item.child("comentario").getValue().toString(),
+                            item.child("horoFin").getValue().toString().toInt(),
+                            item.child("firma").getValue().toString(),
+                            item.child("estado").getValue().toString(),
+                            item.child("fechaPU").getValue().toString(),
+                            item.child("estado").getValue().toString()
+                        )
+
+                        registro.let { lstRegistros.add(it) }
+                    }
                 }
 
                 Log.d("==>", lstRegistros.size.toString())

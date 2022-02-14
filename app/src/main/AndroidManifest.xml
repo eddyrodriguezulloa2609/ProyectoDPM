@@ -39,7 +39,8 @@
             android:parentActivityName=".Login" />
         <activity
             android:name=".ListaReg"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Inicio"/>
         <activity
             android:name=".FinUso"
             android:exported="false"
