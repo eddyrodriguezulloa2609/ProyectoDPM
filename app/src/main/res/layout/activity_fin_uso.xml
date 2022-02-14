@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logoc" />
-
+<!-- boton -->
     <ImageButton
         android:id="@+id/btnLogout"
         android:layout_width="48dp"
