@@ -36,14 +36,14 @@ class AdaptadorPersonalizado(lstRegistro : List<RegistroBE>) : RecyclerView.Adap
         }
 
         holder.btnUso.setOnClickListener { v ->
-            //Toast.makeText(v.context, "Uso para " + reg.id.toString(), Toast.LENGTH_SHORT).show()
+            
             val iUso = Intent(v.context, RegUso::class.java)
             iUso.putExtra("id", reg.id)
             v.context.startActivity(iUso)
         }
 
         holder.btnFin.setOnClickListener { v ->
-            //Toast.makeText(v.context, "Fin para " + reg.id.toString(), Toast.LENGTH_SHORT).show()
+            
             val iFin = Intent(v.context, FinUso::class.java)
             iFin.putExtra("id", reg.id)
             v.context.startActivity(iFin)
