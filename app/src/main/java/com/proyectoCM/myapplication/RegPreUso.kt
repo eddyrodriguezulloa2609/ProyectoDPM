@@ -159,7 +159,6 @@ class RegPreUso : AppCompatActivity() {
         {
             spTurno.setSelection(intent.getIntExtra("iTurno",0))
             spTipoPreuso.setSelection(intent.getIntExtra("iTipo",0))
-            //cargarEquipos(intent.getIntExtra("iTipo",0))
             spCodEquipo.setSelection(intent.getIntExtra("iEquipo",0))
             txtHorometroIni.setText(intent.getIntExtra("iHorometroIni",0).toString())
         }
